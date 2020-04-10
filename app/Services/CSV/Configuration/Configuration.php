@@ -208,7 +208,7 @@ class Configuration
         foreach ($specifics as $name) {
             $class = SpecificService::fullClass($name);
             if (class_exists($class)) {
-                $object->specifics[] = $name;
+                $object->specifics[$name] = 1;
             }
         }
 
